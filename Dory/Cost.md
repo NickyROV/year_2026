@@ -9,7 +9,7 @@
 |---|---|---|---|
 |Water Tight Compartment|1|HKD 1200|TaoBao Ovision|
 |Pentrator|8|HKD 240|Taobao Ovision|
-|ROV Frame|1|HKD 120|PVC + Machining|
+|ROV Frame (1st idea)|1|HKD 120|PVC + Machining|
 |ESP32|2|HKD 100|Mouser electronic|
 |Basic ESC|6|HKD 1778|Blue Robotic|
 |3 phase Thruster|6|HKD 1,200|Taobao FlyMax|
