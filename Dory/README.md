@@ -1,5 +1,6 @@
 Year Group : Y10
-Captain : 
+Team : Dory
+Captain : Katrina
 Members 
 ROV DOF : 6  
 Claw DOF : Left x 2; Right x 2  
