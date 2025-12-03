@@ -1,0 +1,5 @@
+otter is a 6 thruster ROV base on blue robotic navigator + copilot platform as a backup plan if project fail
+
+claw management through gripper setting is only supported by Ardupilot 4.5.3, which means it has to be roll back down as the updated version as of now is 4.5.5, check the following link for a full setup procedure,
+
+https://discuss.bluerobotics.com/t/bluerov2-heavy-gripper-not-working-no-pwm-output-for-gripper/21523/3
