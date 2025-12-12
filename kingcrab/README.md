@@ -11,3 +11,7 @@ Two layers independent control
 |DOF|4 axis movement|12 arm movement|
 |Actuator|6 Thrusters|12 Servos|
 |-----|-----|-----| 
+
+Claw stack setting;  
+Top Pi 400 SSID gripper_top, password : dryside  
+ROV Pi 3B SSID wtc, password : wetside  
