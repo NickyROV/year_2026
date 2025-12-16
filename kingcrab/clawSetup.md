@@ -35,7 +35,37 @@ reboot and try again!!
 
 **ROS2 installation**  
 ROS2 Humble on gripper@gripper-top  
-*ros-base* on wtc@ubuntu, which is light version without Riz and rqt
+*ros-base* on wtc@ubuntu, which is light version without Riz and rqt  
+Test with talker and listener (**sudo apt install ros-humble-demo-nodes-cpp ros-humble-demo-nodes-py** as ros-base doesn't preinstall)
+
+**ROS2 build - Control side**  
+Create workspace : control_ws/src  
+Colcon build -> *~/control_ws$colcon build --symlink-install* to generate *<control_ws>* package  
+Colcon test -> *~/control_ws$colcon test*  
+
+Create package : control
+*~/control_ws$cd src*  
+*~/control_ws/src$ros2 pkg create control --build-type ament_cmake --dependencies rclcpp*
+create cpp in *~/control_ws/src/control/src/keyboard.cpp*  
+add executable in CMakelist.txt in *~/control_ws/src/control*  
+create node -> *~/control_ws$colcon build*  
+source the environment *~/control_ws$source install/setup.bash*
+run node -> *~/control_ws$ros2 run control keyboard*  
+
+**ROS2 build - WTC side**  
+Create workspace : gripper_ws/src  
+Colcon build -> *~/gripper_ws$colcon build --symlink-install* to generate *<gripper_ws>* package  
+Colcon test -> *~/gripper_ws$colcon test*  
+
+Create package : gripper
+*~/gripper_ws$cd src*  
+*~/gripper_ws$src$ros2 pkg create my_package --build-type ament_cmake --dependencies rclcpp*
+
+
+
+
+**Install raspi-config in wtc to enable I2C**
+
 
 **Install PCA9685 on wtc**
 
