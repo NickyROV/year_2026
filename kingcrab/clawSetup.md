@@ -52,6 +52,10 @@ create node -> *~/control_ws$colcon build*
 source the environment *~/control_ws$source install/setup.bash*
 run node -> *~/control_ws$ros2 run control keyboard*  
 
+**Install WiringPi to enable I2C in wtc**  
+Install wiringpi
+
+
 **ROS2 build - WTC side**  
 Create workspace : gripper_ws/src  
 Colcon build -> *~/gripper_ws$colcon build --symlink-install* to generate *<gripper_ws>* package  
@@ -63,8 +67,6 @@ Create package : gripper
 
 
 
-
-**Install raspi-config in wtc to enable I2C**
 
 
 **Install PCA9685 on wtc**
