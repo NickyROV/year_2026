@@ -1,9 +1,9 @@
 **Fremework** : ROS2 Humble Hawksbill   
 Surface Pi: Raspberry pi400 with keyboard running ROS2 Humble on Ubuntu Jammy Desktop   
-Surface Router: WiFi Router   
+Surface Router: None  
 
 **Communication Interface** : Ethernet Cat5   
-ROV-WTC Pi: Raspberry Pi3 running ROS2 Humble on Ubuntu Jammy Server   
+ROV-WTC Pi: Raspberry Pi3 running ROS2 (ros-base) on Ubuntu Server   
 ROV-WTC I2C: pca9685 16 servos controller (I2C)  
 
 
@@ -21,12 +21,12 @@ ROV-WTC I2C: pca9685 16 servos controller (I2C)
 **Setup Procedure**  
 **Power source** : USB-C/27W for Pi and separate Buck Converter to maximum 6V for PCA9685   
 **Sudo** : update and upgrade as usual  
-**Suface Pi with Password "dry"**  
+**Suface Pi with Password "dryside"**  
 ~/control_ws$source install/setup.bash  
 $ros2 run control keyboard  
   
-**ROV_WTC pi with password "wet" via ssh**  
-$ssh wtc@192.168.28.200 (static IP cchek via Wifi Router)  
+**ROV_WTC pi with password "wetside" via ssh**  
+$ssh wtc@192.168.1.11 (static IP)  
 ~/execute_ws$source install/setup.bash  
 $ros2 run execute servo  
 
