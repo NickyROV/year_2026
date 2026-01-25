@@ -1,31 +1,36 @@
-Claw stack setting;  
+**Claw stack setting**  
 Top Pi 400 SSID gripper_top, password : dryside   
 ROV Pi 3B SSID wtc, password : wetside
 
 **Network setting**  
-gripper@gripper_top ->
+*gripper@gripper_top*  
 $ls /etc/netplan/  
 $sudo nano /etc/netplan/50-cloud-init.yaml  
+```yaml
 network:  
-  ethernets:  
-    eth0:  
+ethernets:  
+  eth0: 
       dhcp4: false  
       addresses:  
         - 192.168.1.10/24  
-  version: 2  
+  version: 2
+```
+  
 $sudo netplan apply
 
-
-wtc@ubuntu ->  
+*wtc@ubuntu*    
 $ls /etc/netplan/  
 $sudo nano /etc/netplan/50-cloud-init.yaml  
-network:  
-  ethernets:  
-    eth0:  
-      dhcp4: false  
-      addresses:  
-        - 192.168.1.11/24  
-  version: 2  
+```yaml
+network:
+  ethernets:
+    eth0:
+      dhcp4: false
+      addresses:
+        - 192.168.1.11/24
+  version: 2
+```
+  
 $sudo netplan apply  
 
 **Network Check**  
