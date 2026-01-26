@@ -48,7 +48,7 @@ Create workspace : control_ws/src
 Colcon build -> *~/control_ws$colcon build --symlink-install* to generate *<control_ws>* package  
 Colcon test -> *~/control_ws$colcon test*  
 
-Create package : control
+Create package : dry top gripper control station
 *~/control_ws$cd src*  
 *~/control_ws/src$ros2 pkg create control --build-type ament_cmake --dependencies rclcpp*
 create cpp in *~/control_ws/src/control/src/keyboard.cpp*  
@@ -66,9 +66,14 @@ Create workspace : gripper_ws/src
 Colcon build -> *~/gripper_ws$colcon build --symlink-install* to generate *<gripper_ws>* package  
 Colcon test -> *~/gripper_ws$colcon test*  
 
-Create package : gripper
+Create package : wet bottom gripper servo wtc
 *~/gripper_ws$cd src*  
-*~/gripper_ws$src$ros2 pkg create my_package --build-type ament_cmake --dependencies rclcpp*
+*~/gripper_ws/src$ros2 pkg create gripper --build-type ament_cmake --dependencies rclcpp*  
+create cpp in *~/gripper_ws/src/gripper/src/servo.cpp*
+add executable in CMakeList.txt in *~/gripper_ws/src/gripper*
+source the environment *~/gripper_ws$source install/setup.bash*
+run node -> *~/gripper_ws$ros2 run gripper servo*
+
 
 
 
