@@ -22,12 +22,14 @@ ROV-WTC I2C: pca9685 16 servos controller (I2C)
 **Power source** : USB-C/27W for Pi and separate Buck Converter to maximum 6V for PCA9685   
 **Sudo** : update and upgrade as usual  
 **Suface Pi with Password "dryside"**  
+ROS2 Workspace : control_ws; Package : control; Executable : keyboard  
 ~/control_ws$source install/setup.bash  
 $ros2 run control keyboard  
   
 **ROV_WTC pi with password "wetside" via ssh**  
 $ssh wtc@192.168.1.11 (static IP)  
-~/execute_ws$source install/setup.bash  
-$ros2 run execute servo  
+ROS2 Workspace : gripper_ws; Package : gripper; Executable : servo  
+~/gripper_ws$source install/setup.bash  
+$ros2 run gripper servo  
 
 
